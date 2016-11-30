@@ -5,8 +5,8 @@ date:  2016-11-30 15:08:00 +0800
 categories: Acrux update
 ---
 
-在github上面新建好项目，从本地push code上去的步骤：
-{% highlight bash %}
+<p>在github上面新建好项目，从本地<code>push</code>code上去的步骤：</p>
+{% highlight language-bash %}
 $ git remote add origin git@github.com:dengkaidi/dengkaidi.github.io.git
 $ git push -u origin master
 {% endhighlight %}

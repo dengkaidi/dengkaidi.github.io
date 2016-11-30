@@ -1,0 +1,30 @@
+---
+layout: post
+title: "Java中static总结"
+date:  2016-11-30 15:39:00 +0800
+categories: Acrux update
+---
+
+<p>  static 修饰的属性、方法和内部类，在引用时与类直接产生引用关系而非与类的实例。
+所以引用static修饰的东西可以直接使用<code>类名.方法</code> <code>类名.属性</code>
+等方式来引用。没有static修饰的内部类必须这样声明：</p>
+{% highlight java %}
+    OuterClass.InnerClass innerClass = new OuterClass().new InnerClass();
+{% endhighlight %}
+<p>  没有使用static修饰InnerClass，所以必须<code>new</code>一个OuterClass实例，
+再在此基础上<code>new</code>内部类的实例。因为内部类只能通过外部类的实例才能使用，
+若使用了<code>static</code>则可以如下声明：</p>
+{% highlight java %}
+    OuterClass.StaticInnerClass staticInnerClass = new OuterClass.StaticInnerClass();
+{% endhighlight %}
+<p>使用第一种方式获得InnerClass的实例，必须有OuterClass实例，其实也就是要创建两个实例。
+而使用第二种方式有与StaticInnerClass不依赖于外部类的实例是否存在，故只需要一个
+<code>new</code>即可。</p>
+
+<h3><b>静态变量和实例变量</b></h3>
+<p>
+	<b>在语义上的区别：</b>静态变量前要加static关键字，而实例变量前则不加。
+</p>
+<p>
+	<b>在程序运行时的区别:</b>实例变量属于某个对象的属性，必须创建了实例对象，其中的实例变量才会被分配空间，才能使用这个实例变量。静态变量不属于某个实例对象，而是属于类，所以也称为类变量，只要程序加载了类的字节码，不用创建任何实例对象，静态变量就会被分配空间，静态变量就可以被使用了。<b>总之，实例变量必须创建对象后才可以通过这个对象来使用，静态变量则可以直接使用类名来引用。</b>
+</p>
