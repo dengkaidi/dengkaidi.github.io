@@ -45,7 +45,7 @@ defaults:
 title: "南十字二"
 email: "dengkaidi5@gmail.com"
 description: > # this means to ignore newlines until "baseurl:"
-  Acrux 
+  Acrux 学习、生活、分享
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  dengkaidi

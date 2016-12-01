@@ -2,7 +2,7 @@
 layout: post
 title: "Java中static总结"
 date:  2016-11-30 15:39:00 +0800
-categories: Acrux update
+categories: Java 编程
 ---
 
 <p>  static 修饰的属性、方法和内部类，在引用时与类直接产生引用关系而非与类的实例。
