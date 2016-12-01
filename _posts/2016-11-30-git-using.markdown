@@ -3,7 +3,13 @@ layout: post
 title: "Git使用总结"
 date:  2016-11-30 15:08:00 +0800
 categories: Acrux update
+tags: Git Linux
 ---
+
+* TOC
+{:toc}
+
+# 本地push
 
 <p><b>在github上面新建好项目，从本地<code>push</code>code上去的步骤：</b></p>
 {% highlight shell %}
@@ -11,18 +17,18 @@ $ git remote add origin git@github.com:dengkaidi/dengkaidi.github.io.git
 $ git push -u origin master
 {% endhighlight %}
 
-<p><b>
-	从远程更新到本地：
-</b></p>
-{% highlight shell %}
-# 从远程把代码fetch到本地的temp分支下
+
+# 从远程更新到本地：
+
+```shell
+// 从远程把代码fetch到本地的temp分支下
 $ git fetch origin master:temp
-# 比较本地和远程的修改情况
+// 比较本地和远程的修改情况
 $ git diff temp 
-# 合并分支
+// 合并分支
 $ git merge temp
 $ git branch -d temp
-{% endhighlight %}
+```
 
 <p><b>版本回退</b></p>
 {% highlight shell %}
