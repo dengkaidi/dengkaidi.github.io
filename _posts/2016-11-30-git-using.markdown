@@ -21,17 +21,17 @@ $ git push -u origin master
 # 从远程更新到本地：
 
 ```shell
-// 从远程把代码fetch到本地的temp分支下
+# 从远程把代码fetch到本地的temp分支下
 $ git fetch origin master:temp
-// 比较本地和远程的修改情况
-$ git diff temp 
-// 合并分支
+# 比较本地和远程的修改情况
+$ git diff temp
+# 合并分支
 $ git merge temp
 $ git branch -d temp
 ```
 
-<p><b>版本回退</b></p>
+# 版本回退
 {% highlight shell %}
 # 使用git log 查询到哈希值
-$ git reset --hard ac4520b1d    #ac452...为哈希值不用全输
+$ git reset --hard ac4520b1d...    #ac452...为哈希值不用全输
 {% endhighlight %}

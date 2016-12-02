@@ -2,8 +2,14 @@
 layout: post
 title: "Java中static总结"
 date:  2016-11-30 15:39:00 +0800
-categories: Java 编程
+categories: Acrux update
+tags: Java 编程 总结
 ---
+
+* TOC
+{:toc}
+
+# static的引用
 
 <p>  static 修饰的属性、方法和内部类，在引用时与类直接产生引用关系而非与类的实例。
 所以引用static修饰的东西可以直接使用<code>类名.方法</code> <code>类名.属性</code>
@@ -21,7 +27,7 @@ categories: Java 编程
 而使用第二种方式有与StaticInnerClass不依赖于外部类的实例是否存在，故只需要一个
 <code>new</code>即可。</p>
 
-<h3><b>静态变量和实例变量</b></h3>
+# 静态变量与实例变量
 <p>
 	<b>在语义上的区别：</b>静态变量前要加static关键字，而实例变量前则不加。
 </p>

@@ -3,7 +3,7 @@ layout: post
 title:  "代码高亮设置案例"
 date:   2016-11-30 14:31:00 +0800
 categories: Acrux update
-tags: JavaScript web
+tags: JavaScript web 高亮
 ---
 
 * TOC
