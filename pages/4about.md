@@ -1,9 +1,15 @@
 ---
 layout: page
 title: About
-permalink: /about/
+layout: page
 icon: octicon-heart
-published: false
+isNavItem: true
+permalink: /about/
 ---
 
-自我介绍什么的，最讨厌了！
+生命不息，折腾不止！
+
+
+You can find the source code for Jekyll at
+{% include icon-github.html username="dengkaidi" %} /
+[source](https://github.com/dengkaidi/dengkaidi.github.io/)
