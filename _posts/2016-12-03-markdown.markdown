@@ -3,7 +3,7 @@ layout: post
 title: "Markdown语法整理"
 date: 2016-12-03 10:15:02 +0800
 categories: Acrux update
-tags: jekyll markdown 
+tags: jekyll markdown
 ---
 
 * TOC
@@ -17,7 +17,7 @@ tags: jekyll markdown
 *******
 
 ## Markdown语法
-
+详细的用法说明请[点击](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet "语法")
 > ### 区块元素
 >>
 #### 段落和换行
@@ -30,7 +30,7 @@ tags: jekyll markdown
 Markdown 支持有序列表和无序列表。
 无序列表使用星号、加号或是减号作为列表标记：
 >>>>
-* Red
+ * Red
 + Blue
 - Green
 >>>
@@ -42,7 +42,7 @@ Markdown 支持有序列表和无序列表。
 >>
 #### 分割线
 >>>
-使用三个以上的星号、减号、下划线来建立一个分割线：
+使用三个以上的星号、减号、下划线来建立一个分割线
 
 >
 ### 区段元素
@@ -56,6 +56,82 @@ Markdown支持两种链接语法: **行内式**和**参考式**。
 行内式： 方括号后面紧接着圆括号并插入网址链接即可，如果想加上
 链接的title文字，只要在网址后面，用双引号把title文字扩起来即可。
 >>>>
-This is [an example](http://example.com/ "Title") inline link.   
-See my [About](/about/) page for details.   
+This is [an example](http://example.com/ "Title") inline link.  
+>>>
+如果你是要链接到同样主机的资源，你可以使用相对路径：   
+>>>>
+See my [About](/about/) page for details.
+>>>
+参考式: 在链接文字的括号后面再接上另一个方括号，
+而在第二个方括号里面要填入用以辨识链接的标记：  
+>>>>
+This is [an example][id] reference-style link.
+>>>
+接着，在文件的任意处，你可以把这个标记的链接内容定义出来：
+>>>>
+[id]: http://example.com/  "Optional Title Here"
+\[id]: http://example.com/  "Optional Title Here"
+>>>
+***隐式链接标记功能*** 让你可以省略指定链接标记
+>>>>
+[Google][]  
 
+[Google]: http://google.com/
+
+>
+### Table
+>>
+对其列可以使用冒号：  
+```
+| Tables        | Are           | Cool  |  
+| ------------- |:-------------:| -----:|  
+| col 3 is      | right-aligned | $1600 |  
+| col 2 is      | centered      |   $12 |  
+| zebra stripes | are neat      |    $1 |  
+```
+输出为：
+>>>
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+>>
+每个标题单元格必须至少有3个虚线，外边框使用‘|’，列里面的元素可以使用markdown语法修饰:  
+```  
+Markdown | Less | Pretty  
+--- | --- | ---  
+*Still* | `renders` | **nicely**  
+1 | 2 | 3  
+```
+输出：  
+>>>
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+
+>
+### 图片
+>>
+同样也允许两种样式： 行内式和参考式。
+>>>
+Inline-style:
+```
+![alt text](/static/img/shell-trash.png "Logo Title Text 1")
+```
+>>>>
+![alt text](/static/img/shell-trash.png "Logo Title Text 1")
+>>>
+Reference-style:
+>>>>
+```
+![alt text][logo]
+[logo]: /static/img/shell-trash.png "Logo Title Text 2"
+```
+>>>>
+![alt text][logo]
+>
+Markdown 还没有办法指定图片的宽高，如果需要的话，可以使用普通的 ``<img> ``标签。
+
+[logo]: /static/img/shell-trash.png "Logo Title Text 2"
