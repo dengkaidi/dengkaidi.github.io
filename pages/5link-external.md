@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Link
+title:  About 
 permalink: /link/
 icon: octicon-link-external
 ---
 
-### [还是首页^_^](https://dengkaidi.github.io/)
+### [About ^_^](/about/)

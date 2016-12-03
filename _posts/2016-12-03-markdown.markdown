@@ -1,0 +1,61 @@
+---
+layout: post
+title: "Markdown语法整理"
+date: 2016-12-03 10:15:02 +0800
+categories: Acrux update
+tags: jekyll markdown 
+---
+
+* TOC
+{:toc}
+
+## Markdown是什么
+
+> Makrdown 是一种轻量级标记语言。它允许人们“使用易读易写的
+纯文本格式编写文档，然后转换成有效的XHTML（或者HTML）文档”。
+
+*******
+
+## Markdown语法
+
+> ### 区块元素
+>>
+#### 段落和换行
+>>> 一个Markdown段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行
+（空行的定义是显示上看起来像是空的，便会被视为空行。比方说，某一行只包括空
+格和制表符，则该行也会被视为空行）。
+>>
+#### 列表
+>>>
+Markdown 支持有序列表和无序列表。
+无序列表使用星号、加号或是减号作为列表标记：
+>>>>
+* Red
++ Blue
+- Green
+>>>
+有序列表使用数字接着一个英文句点：
+>>>>
+1. Debian
+2. Arch Linux
+3. Centos
+>>
+#### 分割线
+>>>
+使用三个以上的星号、减号、下划线来建立一个分割线：
+
+>
+### 区段元素
+>>
+#### 链接
+>>>
+Markdown支持两种链接语法: **行内式**和**参考式**。
+>>>
+不管是哪种都要用[方括号]来标记。
+>>>
+行内式： 方括号后面紧接着圆括号并插入网址链接即可，如果想加上
+链接的title文字，只要在网址后面，用双引号把title文字扩起来即可。
+>>>>
+This is [an example](http://example.com/ "Title") inline link.   
+See my [About](/about/) page for details.   
+

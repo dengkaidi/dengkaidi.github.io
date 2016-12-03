@@ -262,3 +262,10 @@ a:active {text-decoration: none}	/* 选定的链接 */
         font-size: 36px;
     }
 }
+
+.icon--github {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
