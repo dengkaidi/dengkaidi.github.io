@@ -31,13 +31,11 @@ tags: jekyll markdown
 >>>
 Markdown 支持有序列表和无序列表。
 无序列表使用星号、加号或是减号作为列表标记：  
->>>>
- * Red
+* Red
 + Blue
 - Green  
 >>>
 有序列表使用数字接着一个英文句点：  
->>>>
 1. Debian
 2. Arch Linux
 3. Centos
@@ -91,7 +89,7 @@ This is [an example][id] reference-style link.
 | col 2 is      | centered      |   $12 |  
 | zebra stripes | are neat      |    $1 |  
 ```
-输出为：
+输出为：  
 >>>
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
