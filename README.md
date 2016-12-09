@@ -1,6 +1,6 @@
 # [日记](https://dengkaidi.github.io)
 
-[![Like Google](https://github.com/dengkaidi/dengkaidi.github.io/blob/master/static/img/Google.svg)][Google]
+[![Like Google](https://github.com/dengkaidi/dengkaidi.github.io/static/img/Google.svg)][Google]
 [![Linux Build Status](https://img.shields.io/travis/jekyll/jekyll/master.svg?label=Linux%20build)][travis]
 [![Windows Build status](https://img.shields.io/appveyor/ci/jekyll/jekyll/master.svg?label=Windows%20build)][appveyor]
 [![Test Coverage](https://img.shields.io/codeclimate/coverage/github/jekyll/jekyll.svg)][coverage]
