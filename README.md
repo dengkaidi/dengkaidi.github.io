@@ -1,6 +1,6 @@
 # [日记](https://dengkaidi.github.io)
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll.svg)][ruby-gems]
+[![Like Google](https://github.com/dengkaidi/dengkaidi.github.io/blob/master/static/img/Google.svg)][Google]
 [![Linux Build Status](https://img.shields.io/travis/jekyll/jekyll/master.svg?label=Linux%20build)][travis]
 [![Windows Build status](https://img.shields.io/appveyor/ci/jekyll/jekyll/master.svg?label=Windows%20build)][appveyor]
 [![Test Coverage](https://img.shields.io/codeclimate/coverage/github/jekyll/jekyll.svg)][coverage]
@@ -8,7 +8,7 @@
 [![Dependency Status](https://img.shields.io/gemnasium/jekyll/jekyll.svg)][gemnasium]
 [![Security](https://hakiri.io/github/jekyll/jekyll/master.svg)][hakiri]
 
-[ruby-gems]: https://rubygems.org/gems/jekyll
+[Google]: https://www.google.com.hk 
 [gemnasium]: https://gemnasium.com/jekyll/jekyll
 [codeclimate]: https://codeclimate.com/github/jekyll/jekyll
 [coverage]: https://codeclimate.com/github/jekyll/jekyll/coverage
