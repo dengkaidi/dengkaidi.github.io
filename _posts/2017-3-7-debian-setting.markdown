@@ -15,15 +15,16 @@ tags: linux
 
 ## U盘启动制作
 
-> Debian类用户dd命令解决：
+>
+Debian类用户dd命令解决：
 {% highlight shell %}
 $ dd if xxx.iso of=/dev/sdb bs=1M
 {% endhighlight %}
-windows用户推荐使用[Rufus][]工具进行U盘刻录
-[Rufus]: http://rufus.akeo.ie/
+windows用户推荐使用[Rufus](http://rufus.akeo.ie/)工具进行U盘刻录
 
 ## apt source
-> 配置软件的安装源：
+>
+配置软件的安装源：
 {% highlight shell %}
 $ sudo vim /etc/apt/sources.list
 {% endhighlight %}
@@ -32,7 +33,8 @@ $ sudo vim /etc/apt/sources.list
 <code>deb-src http://httpredir.debian.org/debian sid main</code>
 
 ## 解决Y410P开关机、拔插耳机有pop音
-> 1.使用<code>sudo alsamixer</code> 命令打开配置<code>F6</code>选择intel
+>
+1.使用<code>sudo alsamixer</code> 命令打开配置<code>F6</code>选择intel
 选项找到<code>Auto-Mute</code>设置为Disabled
 2.在下列文件中添加东西：
 {% highlight shell %}
