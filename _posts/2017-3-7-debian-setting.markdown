@@ -1,0 +1,41 @@
+---
+layout: post
+title:  Debian 初始化记录
+date: 2017-03-07 19:04:28 +0800
+categories: Acrux update
+tags: linux  
+---
+
+* TOC
+{:toc}
+
+> 寒假回家升级Debian到9时，Linux Kernel 升到4.9电脑只能启动windows10，今天
+闲来无聊重操旧业--装系统。装好之后发现了之前解决的问题又忘记怎么解决了，
+现在打算做个备份供以后参考。
+
+## U盘启动制作
+
+> Debian类用户dd命令解决：
+{% highlight shell %}
+$ dd if xxx.iso of=/dev/sdb bs=1M
+{% endhighlight %}
+windows用户推荐使用[Rufus][]工具进行U盘刻录
+[Rufus]: http://rufus.akeo.ie/
+
+## apt source
+> 配置软件的安装源：
+{% gighlight shell %}
+$ sudo vim /etc/apt/sources.list
+{% endhighlight %}
+添加如下内容：
+<code>deb http://httpredir.debian.org/debian sid main</code>
+<code>deb-src http://httpredir.debian.org/debian sid main</code>
+
+## 解决Y410P开关机、拔插耳机有pop音
+> 1.使用<code>sudo alsamixer</code> 命令打开配置<code>F6</code>选择intel
+选项找到<code>Auto-Mute</code>设置为Disabled
+2.在下列文件中添加东西：
+{% highlight shell %}
+$ sudo vim /etc/modprobe.d/modesetting.conf
+添加： options snd-hda-intel model=,generic
+{% endhighlight %}
