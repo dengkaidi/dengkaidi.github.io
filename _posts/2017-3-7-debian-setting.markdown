@@ -24,7 +24,7 @@ windows用户推荐使用[Rufus][]工具进行U盘刻录
 
 ## apt source
 > 配置软件的安装源：
-{% gighlight shell %}
+{% highlight shell %}
 $ sudo vim /etc/apt/sources.list
 {% endhighlight %}
 添加如下内容：
