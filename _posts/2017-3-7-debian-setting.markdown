@@ -39,9 +39,11 @@ $ sudo vim /etc/apt/sources.list
 
 ## 解决Y410P开关机、拔插耳机有pop音
 >
-1.使用<code>sudo alsamixer</code> 命令打开配置<code>F6</code>选择intel
-选项找到<code>Auto-Mute</code>设置为Disabled
-2.在下列文件中添加东西：
+1.使用<code>sudo alsamixer</code>命令打开配置<code>F6</code>选择intel
+PCI选项找到<code>Auto-Mute</code>设置为Disabled
+
+>
+2.执行：
 {% highlight shell %}
 $ sudo vim /etc/modprobe.d/modesetting.conf
 添加： options snd-hda-intel model=,generic
