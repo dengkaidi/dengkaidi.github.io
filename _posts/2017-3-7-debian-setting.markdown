@@ -20,16 +20,21 @@ Debian类用户dd命令解决：
 {% highlight shell %}
 $ dd if xxx.iso of=/dev/sdb bs=1M
 {% endhighlight %}
+>
 windows用户推荐使用[Rufus](http://rufus.akeo.ie/)工具进行U盘刻录
 
 ## apt source
 >
-配置软件的安装源：
+配置软件的安装源： 
+>
 {% highlight shell %}
 $ sudo vim /etc/apt/sources.list
 {% endhighlight %}
-添加如下内容：
-<code>deb http://httpredir.debian.org/debian sid main</code>
+>
+添加如下内容: 
+>
+<code>deb http://httpredir.debian.org/debian sid main</code> 
+>
 <code>deb-src http://httpredir.debian.org/debian sid main</code>
 
 ## 解决Y410P开关机、拔插耳机有pop音
