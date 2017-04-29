@@ -1,0 +1,44 @@
+---
+layout: post
+title: "String字符比较" 
+date: 2017-04-29 11:21:43 +0800
+categories: Acrux update
+tags: Java equals 
+---
+
+<p> 通常我们使用String创建一个字符串方法是给String引用变量赋值：</p>
+{% highlight java %}
+   String s = "test string";
+{% endhighlight %}
+
+也可以使用java语言的特性new一个对象来创建一个字符串：
+{% highlight java %}
+    String s = new String("test string");
+{% endhighlight %}
+
+上面两种方式看似是等效的，先来段代码看看：
+{% highlight java %}
+String s1 = "Hello world";
+String s2 = "Hello world";
+
+System.out.println(s1==s2);
+
+String s3 = new String("Hello world");
+String s4 = new String("Hello world");
+
+System.out.println(s3 == s4);
+{% endhighlight %}
+输出结果为true false
+
+可以看出如果使用关键字new，JVM始终会创建一个新的String实例。使用给String赋值的方法未必创建新的对象，如果字符串“Hello world”之前已经存在，那么再使用String赋值时它可能来自之前存在的内存池中。
+
+  使用 == 运算符比较两个<code>String</code>对象的方法几乎是没有什么用处，因为比较的是两个变量引用的地址。通常采用<code>equals</code>方法：
+  {% highlight java %}
+    if (s1 != null && s1.equals("Hello world")){
+      ...
+      }
+{% endhighlight %}
+or
+{% highlight java %}
+if ("Hello world".equals(s1)){ ... }
+{% endhighlight %}

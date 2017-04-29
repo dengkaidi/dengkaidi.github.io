@@ -1,0 +1,17 @@
+Configuration file: /home/change/src/dengkaidi.github.io/_config.yml
+            Source: /home/change/src/dengkaidi.github.io
+       Destination: /home/change/src/dengkaidi.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 0.336 seconds.
+ Auto-regeneration: enabled for '/home/change/src/dengkaidi.github.io'
+Configuration file: /home/change/src/dengkaidi.github.io/_config.yml
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.
+      Regenerating: 1 file(s) changed at 2016-12-04 09:59:23 ...done in 0.207791896 seconds.
+      Regenerating: 1 file(s) changed at 2016-12-04 09:59:45 ...done in 0.206426777 seconds.
+      Regenerating: 1 file(s) changed at 2016-12-04 10:01:44 ...done in 0.202168755 seconds.
+      Regenerating: 1 file(s) changed at 2016-12-04 10:02:31 ...done in 0.19633116 seconds.
+      Regenerating: 1 file(s) changed at 2016-12-04 10:02:45 ...done in 0.204332492 seconds.
+      Regenerating: 1 file(s) changed at 2016-12-04 10:03:01 ...done in 0.21130626 seconds.
+      Regenerating: 1 file(s) changed at 2016-12-04 10:03:13 ...done in 0.206610811 seconds.
