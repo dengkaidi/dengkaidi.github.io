@@ -48,3 +48,22 @@ PCI选项找到<code>Auto-Mute</code>设置为Disabled
 $ sudo vim /etc/modprobe.d/modesetting.conf
 添加： options snd-hda-intel model=,generic
 {% endhighlight %}
+
+## 网络配置
+>
+1.安装的Debian默认使用/etc/network/interfaces配置文件来管理网络，要使NetworkManager软件生效需要到<code>/etc/NetworkManager/NetworkManager.conf</code>下面把<code>false</code>改为<code>true</code>
+
+>
+2.使用命令行连接到WiFi：
+{% highlight shell %}
+$ sudo vim /etc/network/interfaces
+ insert:
+    auto wlan0
+    iface wlan0 inet dhcp
+    pre-up ip link set wlan0 up
+    pre-up iwconfig wlan0 essid ssid
+    wpa-ssid Touch  # Touch 为你要连接的wifi名称
+    wpa-psk password1111
+
+$ sudo ifup wlan0
+{% endhighlight %}
