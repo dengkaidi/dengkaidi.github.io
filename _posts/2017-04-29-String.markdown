@@ -42,3 +42,6 @@ or
 {% highlight java %}
 if ("Hello world".equals(s1)){ ... }
 {% endhighlight %}
+
+>
+最后附上String实现的[源码](http://hg.openjdk.java.net/jdk8u/jdk8u/jdk/file/9d617cfd6717/src/share/classes/java/lang/String.java)里面介绍的很详细
