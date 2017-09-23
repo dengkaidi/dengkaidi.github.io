@@ -30,6 +30,7 @@ $ sudo vim /etc/shadowsock-libev/config.json
 <p><b> 因爲使用的是樹莓派 pi3 安裝瀏覽器代理資源消耗太大，使用全局代理的方式</b></p>
 >
   首先需要配置下防火牆
+
 ```
 // 起個名字
 $ sudo iptables -t nat -N SHADOWSOCKS
@@ -57,6 +58,7 @@ $ sudo iptables -t nat -A OUTPUT -p tcp -j SHADOWSOCKS
 
 >
 啓動全局代理：
+
 ```
 sudo ss-redir -s remoteIp -p remotePort -l 1080 -k password -m aes-256-cfb  
 ```
