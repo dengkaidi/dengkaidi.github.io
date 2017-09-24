@@ -87,3 +87,11 @@ $ sudo chmod +x /etc/network/if-pre-up.d/iptables
 sudo ss-redir -s remoteIp -p remotePort -l 1080 -k password -m aes-256-cfb  
 ```
 
+### Disable SSH Password 
+
+>
+Open /etc/ssh/sshd_config configuration file
+change PasswordAuthentication yes to PasswordAuthentication no
+```
+$ sudo service sshd restart
+```
