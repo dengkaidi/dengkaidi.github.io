@@ -17,6 +17,20 @@ tags: Raspberry socket5
 $ sudo apt update && sudo apt upgrade 
 $ sudo apt install shadowsocks-libev
 ```
+>
+ps: 可以將本地的key傳到vps裏面，免密登錄
+```
+// 本地生 key 
+$ ssh-keygen -t rsa
+// upload public key to remote
+$ cat .ssh/id_rsa.pub | ssh username@serverIp 'cat >> .ssh/authorized_keys'
+// mkdir .ssh/config file
+// add:
+// Host vps
+//     Hostname serverIP
+// now  you can
+$ ssh username@vps
+```
 
 ### 配置 config
 
