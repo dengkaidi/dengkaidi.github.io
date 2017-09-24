@@ -68,6 +68,16 @@ $ sudo iptables -t nat -A SHADOWSOCKS -p tcp -j REDIRECT --to-ports 1080
 // 使上面配置的防火牆生效
 $ sudo iptables -t nat -A OUTPUT -p tcp -j SHADOWSOCKS
 
+// 將生效的規則保存到文件裏面去, 以後可以在這個文件裏面添加個更改規則
+$ sudo sh -c "iptables-save > /etc/iptables.up.rules"
+// To make sure the iptables rules are started on a reboot we'll create a new file:
+$ sudo vim /etc/network/if-pre-up.d/iptables
+// Add these lines:
+#!/bin/sh
+ /sbin/iptables-restore < /etc/iptables.up.rules
+
+//The file needs to be executable so change the permissions:
+$ sudo chmod +x /etc/network/if-pre-up.d/iptables
 ```
 
 >
