@@ -3,7 +3,7 @@ layout: post
 title: "Shadowsocks 配置"
 date: 2017-09-23 22:26:00 +0800
 categories: Dundee life
-tags: Raspberry socket5
+tags: Raspberry socks5
 ---
 
 * TOC
