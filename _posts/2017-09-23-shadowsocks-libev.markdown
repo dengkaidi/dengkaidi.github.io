@@ -82,16 +82,17 @@ $ sudo chmod +x /etc/network/if-pre-up.d/iptables
 
 >
 啓動全局代理：
-
 ```
-sudo ss-redir -s remoteIp -p remotePort -l 1080 -k password -m aes-256-cfb  
+sudo ss-redir -s remoteIp -p remotePort -l 1080 -k password -m aes-256-cfb  -u -f /var/run/shadowsocks.pid
 ```
 
 ### Disable SSH Password 
 
 >
 Open /etc/ssh/sshd_config configuration file
-change PasswordAuthentication yes to PasswordAuthentication no
+change <code>PasswordAuthentication</code> <code>yes</code>
+to
+<code>PasswordAuthentication</code> <code>no</code>
 ```
 $ sudo service sshd restart
 ```
