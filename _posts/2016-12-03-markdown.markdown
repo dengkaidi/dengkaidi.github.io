@@ -135,3 +135,8 @@ Reference-style:
 Markdown 还没有办法指定图片的宽高，如果需要的话，可以使用普通的 ``<img> ``标签。
 
 [logo]: /static/img/shell-trash.png "Logo Title Text 2"
+
+>
+### Supports emoji
+:heart:
+:cry:
