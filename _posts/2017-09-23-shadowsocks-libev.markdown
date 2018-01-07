@@ -99,10 +99,9 @@ $ sudo service sshd restart
 
 ### 多用户配置
 >
-使用 <code>sss-manager</code> 来实现支持多用户和多端口，具体配置如下：
+使用 <code>sss-manager</code> 来实现支持多用户和多端口，具体配置如下
 ```
 $ sudo vim /etc/shadowsocks-libev/manager.json
-
  \{
      "port_password": \{
           "1234": "password1", // 对应端口号和密码
