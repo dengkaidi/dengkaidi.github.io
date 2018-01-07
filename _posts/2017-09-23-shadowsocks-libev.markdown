@@ -102,16 +102,16 @@ $ sudo service sshd restart
 使用 <code>sss-manager</code> 来实现支持多用户和多端口，具体配置如下
 ```
 $ sudo vim /etc/shadowsocks-libev/manager.json
- \{
-     "port_password": \{
+ {
+     "port_password":{
           "1234": "password1", // 对应端口号和密码
           "1235": "password2",
           "1245": "password3",
           "4567": "password4"
-      \},
+      },
       "timeout":300,
       "method":"aes-256-cfb"
- \}
+ }
 // 使用命令生成多个配置文件
 $ sudo ss-manager -c /etc/shadowsocks-libev/manager.json --manager-address 127.0.0.1:8000 -u manager.json &
 ```
@@ -124,9 +124,9 @@ $ sudo ss-manager -c /etc/shadowsocks-libev/manager.json --manager-address 127.0
 >
 Google 的BBR TCP 算法需要Kernel>4.9 ，一般我使用的都满足，开启BBR方法：
 ```
-$ sudo sysctl net.ipv4.tcp\_available\_congestion\_control
-$ sudo sysctl net.ipv4.tcp\_congestion\_control
-$ sudo sysctl net.core.default\_qdisc
+$ sudo sysctl net.ipv4.tcp_available_congestion_control
+$ sudo sysctl net.ipv4.tcp_congestion_control
+$ sudo sysctl net.core.default_qdisc
 // 查询如果有结果证明配置成功
 $ sudo lsmod | grep bbr
 ```
