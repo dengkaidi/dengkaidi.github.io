@@ -1,27 +1,25 @@
 ---
 layout: post
-title:  SQL Æ½Ê±×Ü½á
-date: 2018-03-25 19:04:28 +0800
-categories: Company update
-tags: Oracle  
+title: SQLæ—¥å¸¸ç¬”è®°
+date: 2018-03-25 17:55:00 +0800
+tags: Oracle
 ---
 
 * TOC
 {:toc}
 
-## Í¨¹ıSQLÓï¾ä½«Ôª×ª»¯ÎªÍòÔª
+## é€šè¿‡SQLå®ç°å°†å•ä½è½¬æ¢
 
 ```
-/**Í¨¹ıSQLÊµÏÖĞ¡ÓÚÒ»ÍòÊ±Õ¹Ê¾Êı¾İ¿âÀïÃæµÄÊı¾İ£¬´óÓÚÒ»ÍòÊ±×ª»¯ÎªÍòÔª**/
-select decode(sign(money - 10000),-1,
-money || ' Ôª',
-round(trunc(money / 10000, 3), 2) || ' ÍòÔª') as money 
-from dual;
+/**é€šè¿‡SQLå®ç°å°äºä¸€ä¸‡æ—¶å±•ç¤ºæ•°æ®åº“é‡Œé¢çš„æ•°æ®ï¼Œå¤§äºä¸€ä¸‡æ—¶è½¬åŒ–ä¸ºä¸‡å…ƒ**/
+select decode(sign(money - 10000), -1,
+money || 'å…ƒ',
+round(trunc(money / 10000, 3), 2) || 'ä¸‡å…ƒ') as money from dual;
+```
+## å¤šåˆ—è½¬ä¸€è¡Œ
+```
+select caa.objectId, listagg(c.Id,'||') with group (order by caa.objectId) as Ids
+from collateral c left join collateral_amount_assign caa
+on caa.calid = '1' caa.xx= c.projectId group by caa.objectId
 ```
 
-## ¶àÁĞ×ªÒ»ĞĞ
-```
-SELECT caa.objectId,listagg(C.id, '||') WITHIN GROUP(ORDER BY caa.objectId) as collateralIds
-  FROM COLLATERAL C  left join collateral_amount_assign caa
-  on caa.valid = '1' WHERE 1=1 GROUP BY caa.objectId
-```
