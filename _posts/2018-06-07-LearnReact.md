@@ -12,7 +12,7 @@ tags: React
 ### React
 #### 什么是React
 >React可以非常轻松的创建用户交互界面，在数据变更时可以高效的重新渲染页面。官方代码示例：
-```typescript jsx
+```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -44,7 +44,7 @@ React组件的构造函数将会在装配之前被调用。当为一个React.Com
 <code>super(props)</code>。否则，```this.props```在构造函数中将是未定义，并可能引发异常。更新state使用```setState()```方法，
 ```setState()```被认为是一次更新请求未必会立即更新组件，这里需要了解React的生命周期其中有一个方法决定组件是否更新：
 ```shouldComponentUpdate()```，我们也可以使用setState的回调来让组件重新渲染：
-```typescript jsx
+```javascript
 this.setState((prevState, props) => {
   return {counter: prevState.counter + props.step};
 });
@@ -67,7 +67,7 @@ ______
 3. 在Reducer里面更新state，理念：<code>(oldState, action) => newState</code>，使用纯函数。
 4. Action包含两个参数(type, payload), type一般使用常量，用来标识动作类型， payload标识动作携带的数据。  
 官网对redux的极简描绘：
-```typescript jsx
+```javascript
 import { createStore } from 'redux'
 ​
 /**
