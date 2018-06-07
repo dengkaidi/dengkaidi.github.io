@@ -67,7 +67,7 @@ ____
 3. 在Reducer里面更新state，理念：<code>(oldState, action) => newState</code>，使用纯函数。
 4. Action包含两个参数(type, payload), type一般使用常量，用来标识动作类型， payload标识动作携带的数据。  
 官网对redux的极简描绘：
-```
+```typescript jsx
 import { createStore } from 'redux'
 ​
 /**
