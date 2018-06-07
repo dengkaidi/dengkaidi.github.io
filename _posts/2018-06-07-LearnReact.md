@@ -12,7 +12,7 @@ tags: React
 ### React
 #### 什么是React
 >React可以非常轻松的创建用户交互界面，在数据变更时可以高效的重新渲染页面。官方代码示例：  
-```javascript 
+```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
 
