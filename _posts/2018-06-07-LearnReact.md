@@ -13,23 +13,21 @@ tags: React
 #### 什么是React
 >React可以非常轻松的创建用户交互界面，在数据变更时可以高效的重新渲染页面。官方代码示例：  
 ```javascript
-import React from 'react';
-import ReactDOM from 'react-dom';
-
+import React from 'react'
+import ReactDOM from 'react-dom'
 class HelloMessage extends React.Component {
   render() {
     return (
       <div>
       Hello {this.props.name}
       </div>
-    );
+    )
   }
 }
-
 ReactDOM.render(
   <HelloMessage name={'Dundee'} />,
   document.getElementById('root')
-);
+)
 ```
 >运行该组件页面上为现实：*Hello Dundee*  
 <code>render()</code>方法是组件必须有的部分，编写好的React元素最终通过该方法渲染到页面的DOM中，
