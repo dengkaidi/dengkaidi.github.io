@@ -11,8 +11,8 @@ tags: React
 
 ### React
 #### 什么是React
->React可以非常轻松的创建用户交互界面，在数据变更时可以高效的重新渲染页面。官方代码示例：
-```javascript
+>React可以非常轻松的创建用户交互界面，在数据变更时可以高效的重新渲染页面。官方代码示例：  
+```javascript 
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -37,13 +37,13 @@ ReactDOM.render(
 
 #### props & state
 >在之前代码中已经和<code>props</code>见过面了，调用一个组件时可以在其代码内添加key={value}形式传递组件的属性。在后续的使用中
-可能还会遇到形如<code><ComponentName {...PropsName} /></code>引入组件，这里```{...PropsName}``` 使用的是ES6的展开语法，
+可能还会遇到形如<code><ComponentName {...PropsName} /></code>引入组件，这里<code>{...PropsName}</code> 使用的是ES6的展开语法，
 他会像往一个函数里面传参一样最终会展开以key-value的形式对组件的props进行赋值。  
   说起<code>state</code>应该介绍一下React的构造函数<code>constructor(props)</code>
 React组件的构造函数将会在装配之前被调用。当为一个React.Component子类定义构造函数时，你应该在任何其他的表达式之前调用
-<code>super(props)</code>。否则，```this.props```在构造函数中将是未定义，并可能引发异常。更新state使用```setState()```方法，
-```setState()```被认为是一次更新请求未必会立即更新组件，这里需要了解React的生命周期其中有一个方法决定组件是否更新：
-```shouldComponentUpdate()```，我们也可以使用setState的回调来让组件重新渲染：
+<code>super(props)</code>。否则，<code>this.props</code>在构造函数中将是未定义，并可能引发异常。更新state使用```setState()```方法，
+<code>setState()</code>被认为是一次更新请求未必会立即更新组件，这里需要了解React的生命周期其中有一个方法决定组件是否更新：
+<code>shouldComponentUpdate()</code>，我们也可以使用setState的回调来让组件重新渲染：
 ```javascript
 this.setState((prevState, props) => {
   return {counter: prevState.counter + props.step};
@@ -52,13 +52,19 @@ this.setState((prevState, props) => {
 
 #### React 生命周期
 >Mounting:  
-```getInitialState``` => ```componentWillMount``` => ```render``` => ```componentDidMount```
+```
+getInitialState => componentWillMount => render => componentDidMount
+```
 ______
 >Updating:  
-```componentWillReceiveProps``` => ```shouldComponentUpdate``` => ```componentWillUpdate``` => ```render``` => ```componetDidUpdate```
+```
+componentWillReceiveProps => shouldComponentUpdate => componentWillUpdate => render => componetDidUpdate
+```
 ______
 >Unmounting:  
-``` componentWillUnmount ```
+``` 
+componentWillUnmount
+```
 
 ### Redux 状态管理
 >Redux 最简单的、最核心的：***Store***、***Action***、***Reducer***.  
@@ -114,4 +120,4 @@ store.dispatch({ type: 'INCREMENT' })
 store.dispatch({ type: 'DECREMENT' })
 // 1
 ```
-
+### Redux-saga 异步
