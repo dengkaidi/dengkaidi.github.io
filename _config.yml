@@ -15,11 +15,12 @@
 # in the templates via {{ site.myvariable }}.
 permalink: /:year-:month-:day/:title/
 
-highlighter: rouge
+highlighter: pygments
 markdown: kramdown
 kramdown:
   input:  GFM
-  syntax_highlighter: rouge
+  auto_ids:      true
+  auto_id_prefix:'id-'
 
 
 paginate: 10
