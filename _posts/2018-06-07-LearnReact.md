@@ -56,7 +56,7 @@ this.setState((prevState, props) => {
 ______
 >Updating:  
 ```componentWillReceiveProps``` => ```shouldComponentUpdate``` => ```componentWillUpdate``` => ```render``` => ```componetDidUpdate```
-____
+______
 >Unmounting:  
 ``` componentWillUnmount ```
 
