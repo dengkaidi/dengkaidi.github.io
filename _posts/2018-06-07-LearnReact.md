@@ -24,11 +24,7 @@ class HelloMessage extends React.Component {
     )
   }
 }
-ReactDOM.render(
-  <HelloMessage name={'Dundee'} />,
-  document.getElementById('root')
-)
-```
+```  
 >运行该组件页面上为现实：*Hello Dundee*  
 <code>render()</code>方法是组件必须有的部分，编写好的React元素最终通过该方法渲染到页面的DOM中，
 当组件状态发生变化时最终通过该方法重新渲染页面。
@@ -41,7 +37,7 @@ ReactDOM.render(
 React组件的构造函数将会在装配之前被调用。当为一个React.Component子类定义构造函数时，你应该在任何其他的表达式之前调用
 <code>super(props)</code>。否则，<code>this.props</code>在构造函数中将是未定义，并可能引发异常。更新state使用```setState()```方法，
 <code>setState()</code>被认为是一次更新请求未必会立即更新组件，这里需要了解React的生命周期其中有一个方法决定组件是否更新：
-<code>shouldComponentUpdate()</code>，我们也可以使用setState的回调来让组件重新渲染：
+<code>shouldComponentUpdate()</code>，我们也可以使用setState的回调来让组件重新渲染:  
 ```javascript
 this.setState((prevState, props) => {
   return {counter: prevState.counter + props.step};
@@ -118,4 +114,5 @@ store.dispatch({ type: 'INCREMENT' })
 store.dispatch({ type: 'DECREMENT' })
 // 1
 ```
+
 ### Redux-saga 异步
