@@ -24,6 +24,8 @@ class HelloMessage extends React.Component {
     )
   }
 }
+```
+```javascript
 ReactDOM.render(
   <HelloMessage name="React" />,
   mountNode
