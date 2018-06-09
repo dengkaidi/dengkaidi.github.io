@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "React循序渐进"
+title: "React&Redux"
 date:  2018-06-07 15:08:00 +0800
 categories: Dunndee update
 tags: React
@@ -24,8 +24,12 @@ class HelloMessage extends React.Component {
     )
   }
 }
+ReactDOM.render(
+  <HelloMessage name="React" />,
+  mountNode
+);
 ```  
->运行该组件页面上为现实：*Hello Dundee*  
+>运行该组件页面上为现实：*Hello React*  
 <code>render()</code>方法是组件必须有的部分，编写好的React元素最终通过该方法渲染到页面的DOM中，
 当组件状态发生变化时最终通过该方法重新渲染页面。
 
