@@ -128,7 +128,6 @@ store.dispatch({ type: 'DECREMENT' })
 next()方法返回一个对象，这个对象包含两个属性：value 和 done，value 属性表示本次
  yield 表达式的返回值，done 属性为布尔类型，表示生成器后续是否还有 yield 语句，
  即生成器函数是否已经执行完毕并返回。
- 
  #### redux何处使用saga
  >Redux大致执行过程：
  1. store持有应用不可变的state。
@@ -160,7 +159,6 @@ function* fetchUser(action) {
       yield put({type: "USER_FETCH_FAILED", message: e.message});
    }
 }
-
 /*
   在每个 `USER_FETCH_REQUESTED` action 被 dispatch 时调用 fetchUser
   允许并发（译注：即同时处理多个相同的 action）
