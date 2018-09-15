@@ -2,8 +2,8 @@
 layout: post
 title: "Ruby installation"
 date: 2017-09-28 21:17:04 +0800 
-categories: Raspberry update
-tags: software 
+categories: 工具
+tags: Ruby 
 ---
 
 * TOC

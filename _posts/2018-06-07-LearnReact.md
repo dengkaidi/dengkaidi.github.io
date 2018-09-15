@@ -2,7 +2,7 @@
 layout: post
 title: "React & Redux"
 date:  2018-06-07 15:08:00 +0800
-categories: Dundee update
+categories: 前端
 tags: React
 ---
 

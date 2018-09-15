@@ -2,8 +2,8 @@
 layout: post
 title:  Debian 初始化记录
 date: 2017-03-07 19:04:28 +0800
-categories: Acrux update
-tags: linux  
+categories: 操作系统
+tags: Linux Debian 
 ---
 
 * TOC

@@ -2,6 +2,7 @@
 layout: post
 title: SQL日常笔记
 date: 2018-03-25 17:55:00 +0800
+categories: SQL
 tags: Oracle
 ---
 

@@ -1,7 +1,7 @@
 ---
-categories: Note
+categories: 工具
 layout: post
-tags: Note
+tags: 小计
 title: 软件工具合集
 ---
 

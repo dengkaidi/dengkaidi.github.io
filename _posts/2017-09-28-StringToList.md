@@ -2,8 +2,8 @@
 layout: post
 title: "String to List"
 date: 2017-09-28 21:51:05 +0800
-categories: Raspberry commit 
-tags: Java Code
+categories: 编程 
+tags: Java
 ---
 
 * TOC
