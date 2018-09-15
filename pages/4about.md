@@ -7,9 +7,9 @@ isNavItem: true
 permalink: /about/
 ---
 
-生命不息，折腾不止！
-
-由于使用的是Disqus评论功能，国内用户需要翻墙才能看到。
+- Believe.  
+- Relieve.  
+- Achieve.  
 
 You can find the source code for Jekyll at
 {% include icon-github.html username="dengkaidi" %} /

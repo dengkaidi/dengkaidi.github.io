@@ -6,9 +6,6 @@
  * 页面ready方法
  */
 $(document).ready(function() {
-
-    console.log("你不乖哦，彼此之间留点神秘感不好吗？");
-
     backToTop();
     search();
 });
@@ -34,9 +31,11 @@ function backToTop() {
 
     //点击回到顶部
     st.click(function() {
-        $("body").animate({
-            scrollTop: "0"
-        }, 500);
+        // $("body").animate({
+        //     scrollTop: "0"
+        // }, 500);
+        $("html,body").animate({scrollTop:0},"slow");
+        return false;
     });
 
 
