@@ -31,11 +31,9 @@ function backToTop() {
 
     //点击回到顶部
     st.click(function() {
-        // $("body").animate({
-        //     scrollTop: "0"
-        // }, 500);
-        $("html,body").animate({scrollTop:0},"slow");
-        return false;
+        $("html, body").animate({
+            scrollTop: "0"
+        }, 500);
     });
 
 
