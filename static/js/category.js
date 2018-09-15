@@ -14,14 +14,14 @@ $(document).ready(function() {
 function categoryDisplay() {
     selectCategory();
     $('.categories-item').click(function() {
-        window.location.hash = "#" + $(this).attr("cate");
+        window.location.hash = "#" + encodeURIComponent($(this).attr("cate"));
         selectCategory();
     });
 }
 
 function selectCategory(){
     var exclude = ["",undefined];
-    var thisId = window.location.hash.substring(1);
+    var thisId = decodeURIComponent(window.location.hash.substring(1));
     var allow = true;
     for(var i in exclude){
         if(thisId == exclude[i]){
