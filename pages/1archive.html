@@ -6,7 +6,22 @@ icon: octicon-repo
 isNavItem: true
 styles: archive.css
 ---
-
+<div class="module" style="
+    margin-left: 350px;
+    margin-right: 350px;">
+    <script>
+        (function() {
+          var cx = '009888800274048938832:k1lx81rqjyk';
+          var gcse = document.createElement('script');
+          gcse.type = 'text/javascript';
+          gcse.async = true;
+          gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(gcse, s);
+        })();
+      </script>
+      <gcse:search></gcse:search>
+</div>
 <section id="cd-timeline" class="cd-container">
 {% for post in site.posts  %}
     <div class="cd-timeline-block" id="{{ post.date | date: '%Y-%m-%d' }}">
