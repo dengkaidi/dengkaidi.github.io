@@ -35,15 +35,14 @@ $ ssh username@vps
 ### 配置 config
 
 <p><b>按照配置文件裏面的注釋進行設置</b></p>
-```
+``` 
 $ sudo vim /etc/shadowsock-libev/config.json
 ```
 
 ### 本地全局代理
 
 <p><b> 因爲使用的是樹莓派 pi3 安裝瀏覽器代理資源消耗太大，使用全局代理的方式</b></p>
->
-  首先需要配置下防火牆
+>首先需要配置下防火牆
 
 ```
 // 起個名字
@@ -119,6 +118,28 @@ $ sudo ss-manager -c /etc/shadowsocks-libev/manager.json --manager-address 127.0
 ### 对指定用户进行流量控制
 >
 这里主要通过 <code>iptables</code> 配置防火墙来实现，用户流量和速度的控制
+1. 对4321端口输入进行监测
+```bash
+$ sudo iptables -A INPUT -p tcp --dport 4321
+```
+2. 对4321端口输出进行监测
+```bash
+$ sudo iptables -A OUTPUT -p tcp --sport 4321
+```
+3. 统计查询
+```bash
+$ sudo iptables -nvL
+```
+4. 重置流量监测
+```
+$ sudo iptables -Z INPUT
+$ sudo iptables -Z OUTPUT
+```
+5. 移除对4321端口监测
+```
+$ sudo iptables -D INPUT -p tcp --dport 4321
+$ sudo iptables -D OUTPUT -p tcp --sport 4321
+```
 
 ### BBR 开启
 >
