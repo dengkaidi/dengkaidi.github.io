@@ -84,7 +84,8 @@ $ pips install efb-wechat-slave
 # 创建 Telegram profile
 $ mkdir profiles/blueset.telegram
 $ touch profiles/blueset.telegram/config.yaml
-
+```
+```
 # 创建微信 profile
 $ mkdir profiles/blueset.wechat
 $ touch profiles/blueset.wechat/config.yaml
@@ -104,12 +105,11 @@ flags:
 ```
 #### 引入配置
 在Default的config.yaml 里面引入Telegram和微信:  
-```vim .ehforwarderbot/profiles/default/config.yaml```
+<code>vim .ehforwarderbot/profiles/default/config.yaml</code>
 ```
 token: "6***262:AA***nUWU"
 admins:
 - 20***7
-
 master_channel: "blueset.telegram"
 slave_channels:
 - "blueset.wechat"
