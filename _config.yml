@@ -57,6 +57,10 @@ comment:
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 theme: minima
 gems:
   - jekyll-feed
@@ -64,3 +68,6 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  # excerpt
+excerpt_separator: "\n\n\n\n"
+
