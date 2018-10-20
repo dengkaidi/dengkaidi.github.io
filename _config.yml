@@ -15,11 +15,11 @@
 # in the templates via {{ site.myvariable }}.
 permalink: /:year-:month-:day/:title/
 
-highlighter: rouge
-markdown: kramdown
-kramdown:
-  input:  GFM
-  syntax_highlighter: rouge
+# highlighter: rouge
+# markdown: kramdown
+# kramdown:
+#   input:  GFM
+#   syntax_highlighter: rouge
 
 
 paginate: 10
@@ -68,6 +68,4 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
-  # excerpt
-excerpt_separator: "\n\n\n\n"
 
