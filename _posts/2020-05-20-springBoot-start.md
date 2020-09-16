@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring Boot启动慢优化
+title: 'Spring Boot启动慢优化'
 category: 编程
 tags:
 -Java
@@ -10,6 +10,7 @@ tags:
 * TOC
 {:toc}
 
+### 背景
 项目使用spring boot框架，在开发环境和测试环境启动没有问题。测试人员每次jenkins发布线上环境时，老是会阻塞在某个地方等个一分钟左右才会继续打印启动日志。
 
 top 看了一下各项指标正常
@@ -90,7 +91,7 @@ securerandom.source=file:/dev/urandom
 ```
 
 
-解决方案：
+### 解决方案
 
 因为不是支付类系统对随机数的要求不高，再加之系统中基本没有使用到随机函数，可以改为使用无阻塞的熵池，具体修改如下 ：
 
