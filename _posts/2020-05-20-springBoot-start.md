@@ -1,10 +1,8 @@
 ---
 layout: post
-title: 'Spring Boot启动慢优化'
-category: 编程
-tags:
--Java
--JVM
+title: "Spring Boot启动慢优化"
+categories: 编程
+tags: Java JVM
 ---
 
 * TOC
