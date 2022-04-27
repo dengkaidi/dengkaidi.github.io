@@ -22,10 +22,10 @@ title: Kafka总结
 - 直接将消息发送的对应partition leader的broker服务，没有路由。
 - 客户端通过高阶发送API对key进行hash确定要发往的partition，当然也可自定义发送的partition。
 
-### 异步发送
+#### 异步发送
 批处理是提升效率的重要因素之一，kafka支持在内存中累计一定的批操作，通过单个请求发送多个批处理。
 
-### 配置
+#### 配置
 - 核心配置：<code>bootstrap.servers</code> 帮助客户端找到kafka集群；<code>client.id</code> 不是必要配置但是可以帮助broker关联收到的request。
 - 消息传输可靠性：<code>acks</code> 默认1。0: 不保证消息投递成功，但是吞吐量提升到极致；1: leader节点写入成功就返回；all: 不仅leader节点写入成功，相应的副本节点也写入成功。
 - 消息的有序性：如果配置了<code>retries</code> > 0 时，当消息发送到broker失败，重试的时候可能存在之后的请求已经写入成功，存在消息乱序的情况，可以配置<code>max.in.flight.requests.per.connection</code> = 0 来保证一个连接里面只能有一个request动作。
