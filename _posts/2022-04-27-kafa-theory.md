@@ -36,7 +36,7 @@ title: Kafka总结
 #### push vs pull
  Kafka和传统的大多数消息中间件采取的方式一样，生产者使用push方式，消费组使用pull方式。push和pull各有优势。push 通过broker控制消息投递速率可以保证消息的实时性，但是需要消费方有能处理最大推送速率的能力。pull 由消费方控制消息获取的速率，但是存在消息获取延迟问题，可以适当调整pull的间隔来近似达到push的实时性。
 
- #### 消费组
+#### 消费组
 - partition和consumer线程是N:1关系，确保了特定的消息队列只被同一组下的一个消费线程处理，避免锁竞争。
 - 之前的版本使用zookeeper来管理消费组，新版本kafka使用自身来管理去除对zk的依赖。
 - kafka内部使用topic<code>__consumer_offsets</code>来管理消费的offset，hash到的partition的leader节点即为当前消费组的协调者。
